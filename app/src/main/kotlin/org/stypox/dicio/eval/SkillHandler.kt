@@ -59,7 +59,7 @@ class SkillHandler @Inject constructor(
         TranslationInfo,
         NotifyInfo,
         FlashlightInfo,
-        BridgeInfo,
+        // BridgeInfo,  // Temporarily disabled for build testing
     )
 
     private val fallbackSkillInfoList = listOf(
