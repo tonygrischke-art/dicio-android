@@ -30,6 +30,7 @@ jobs:
           api-level: 34
           ndk-version: r26c
           build-tools-version: 34.0.0
+          cmdline-tools-version: latest
           cache-key: android-sdk-${{ runner.os }}-${{ hashFiles('gradle/libs.versions.toml') }}
 
       - name: Grant execute permission to gradlew
