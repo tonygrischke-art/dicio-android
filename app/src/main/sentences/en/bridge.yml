@@ -1,137 +1,107 @@
 send_sms:
-  - (send|text) (an?|the)? (sms|message|text) to <number:phone> (saying|with) <body:text>
-  - (send|text) <number:phone> (a|the)? (message|text) <body:text>
-  - message <number:phone> <body:text>
-
-read_sms:
-  - (read|show|get) (my|the)? (sms|messages|texts)
-  - what (are|were) my (last|recent) (messages|texts)
+  - send sms to <number:phone> saying <body:text>
 
 make_call:
-  - (call|dial|phone) <number:phone>
-  - (make|place) (a|the)? call to <number:phone>
+  - call <number:phone>
 
 get_contacts:
-  - (show|list|get) (my|the)? contacts
-  - who (is|are) in my (contacts|address book)
+  - show contacts
 
 clipboard_get:
-  - (get|show|read) (my|the)? clipboard
-  - what('s| is) in my clipboard
+  - read clipboard
 
 clipboard_set:
-  - (set|put|copy) (to|on) (my|the)? clipboard <text:text>
   - copy <text:text> to clipboard
 
 tts_speak:
-  - (say|speak|read aloud) <text:text>
-  - (tell|read) me <text:text>
-
-stt_listen:
-  - (listen|transcribe) (to|for) me
-  - (start|begin) (voice|speech) (recognition|dictation)
+  - say <text:text>
 
 shell:
-  - (run|execute) (shell|command) <cmd:text>
-  - (in|run) terminal <cmd:text>
+  - run shell <cmd:text>
 
 python:
-  - (run|execute) python <code:text>
+  - run python <code:text>
 
 file_read:
-  - (read|show) file <path:text>
+  - read file <path:text>
 
 file_write:
-  - (write|save) (to|in) file <path:text> <content:text>
+  - write file <path:text> <content:text>
 
 file_list:
-  - (list|show) files (in|at) <path:text>
+  - list files <path:text>
 
 wifi_toggle:
-  - (turn on|enable|switch on) (wifi|wi-?fi|wireless)
-  - (turn off|disable|switch off) (wifi|wi-?fi|wireless)
+  - turn on wifi
+  - turn off wifi
 
 bt_toggle:
-  - (turn on|enable|switch on) bluetooth
-  - (turn off|disable|switch off) bluetooth
+  - turn on bluetooth
+  - turn off bluetooth
 
 brightness_set:
-  - (set|change) brightness to <level:number>
-  - make (screen|display) <level:number> (percent|%)
+  - set brightness to <level:number>
 
 volume_set:
-  - (set|change) (volume|sound) to <level:number>
-  - (turn up|turn down|increase|decrease) volume
+  - set volume to <level:number>
 
 flashlight:
-  - (turn on|enable|switch on) (flashlight|torch)
-  - (turn off|disable|switch off) (flashlight|torch)
+  - turn on flashlight
+  - turn off flashlight
 
 location_get:
-  - (where am i|get|show) (my|the)? location
+  - get location
 
 battery_info:
-  - (show|get|what('s| is)) (my|the)? battery (level|status|info)
+  - show battery
 
 app_list:
-  - (list|show) (my|the)? (apps|applications)
-
-app_grant_perm:
-  - (grant|give) (permission|access) <permission:text> to <package:text>
-
-app_revoke_perm:
-  - (revoke|remove|take away) (permission|access) <permission:text> from <package:text>
-
-app_install:
-  - install (app|apk) <apk_path:text>
-
-app_uninstall:
-  - uninstall (app|package) <package:text>
+  - list apps
 
 app_kill:
-  - (kill|stop|close) (app|application) <package:text>
+  - kill app <package:text>
 
 fs_read:
-  - (read|show) (file|root) <path:text>
+  - read root <path:text>
 
 fs_write:
-  - (write|save) (file|root) <path:text> <content:text>
+  - write root <path:text> <content:text>
 
 fs_list:
-  - (list|show) (files|directory) (at|in) <path:text>
+  - list root <path:text>
 
 fs_copy:
-  - copy (file|from) <src:text> to <dst:text>
+  - copy root <src:text> to <dst:text>
 
 fs_move:
-  - move (file|from) <src:text> to <dst:text>
+  - move root <src:text> to <dst:text>
 
 fs_delete:
-  - delete (file|at) <path:text>
+  - delete root <path:text>
 
 settings_get:
-  - get setting <key:text> (from|in) <namespace:text>
+  - get setting <key:text> <namespace:text>
 
 settings_put:
-  - set setting <key:text> to <value:text> (in|for) <namespace:text>
+  - set setting <key:text> <value:text> <namespace:text>
 
 intent_send:
-  - (send|broadcast) intent <action:text>
+  - send intent <action:text>
 
 process_list:
-  - (list|show) (running )?processes
+  - list processes
 
 process_kill:
   - kill process <target:text>
 
 http_get:
-  - (get|fetch) (url|from) <url:text>
+  - get url <url:text>
 
 http_post:
-  - (post|send) (to|json) <url:text> <json:text>
+  - post url <url:text> <json:text>
 
 camera_capture:
-  - (take|snap) (a|the)? (photo|picture)
+  - take photo
 
 audio_record:
-  - record audio (for|) <duration:number> seconds
+  - record audio <duration:number> seconds
