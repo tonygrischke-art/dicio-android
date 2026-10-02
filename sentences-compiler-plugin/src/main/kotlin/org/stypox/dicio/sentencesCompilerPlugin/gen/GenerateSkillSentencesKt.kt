@@ -129,7 +129,7 @@ private fun generateResultFromMatchFunction(skill: ParsedSkill, returnType: Clas
         }
     }
 
-    fromStandardResultFun.addStatement($$"""else -> throw IllegalArgumentException("Unknown sentence id $sentenceId")""")
+    fromStandardResultFun.addStatement("""else -> throw IllegalArgumentException("Unknown sentence id \$sentenceId")""")
     fromStandardResultFun.endControlFlow()
     return fromStandardResultFun.build()
 }
